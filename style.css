@@ -2,21 +2,43 @@
     outline: solid blue 1px;
 }
 
+p {
+    font-size: clamp();
+}
+
 .dashboard-layout {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr;
     height: 100vh;
+    
 }
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
     grid-column: 1 / 2;
     grid-row: 1 / 2
 }
 
+.sidebar > nav {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+/* main wraps everything EXCLUDING the sidebar */
+
 .main {
     grid-column: 2 / -1;
     grid-row: 1;
+    display: grid;
+    /* height based on tob bar content size, 1fr tells everything else to use up the remaining space*/
+    grid-template-rows: auto 1fr;
+    height: 100%;
 }
 
 .top-bar {
@@ -33,7 +55,36 @@
 .btns-right {
     grid-column: 2;
     grid-row: 2;
+    display: flex;
+    gap: 3rem;
 }
 
+/* main-content wraps the PROJECT grid and the project tiles */
 
+.main-content {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+.projects {
+    padding: 1rem;
+}
+
+.project-grid {
+    max-width: 100%;
+    justify-content: start;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(175px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 3px;
+  padding: clamp(0.5rem, 1vw, 1rem);
+  height: 85%;
+}
 
