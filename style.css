@@ -64,11 +64,13 @@ p {
 .main-content {
     display: grid;
     height: 100%;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: minmax(0, 3fr) minmax(260px, 1fr);
+    grid-template-rows: 3rem 1fr;
 }
+
 .projects {
     padding: 1rem;
+    grid-row: 2;
 }
 
 .project-grid {
@@ -88,3 +90,34 @@ p {
   height: 85%;
 }
 
+/* announcements and trending aside */
+
+.info-bar {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+.info-bar > section {
+    font-size: clamp(0.2rem, 0.7rem, 1rem);
+    padding: 1rem;
+}
+
+.announcements {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 3;
+    
+}
+
+.announcement-box {
+    width: 30px;
+}
+
+/* mobile breakpoint */
+
+@media (max-width: 800px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
