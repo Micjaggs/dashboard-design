@@ -1,9 +1,6 @@
 * {
     outline: solid blue 1px;
-}
-
-p {
-    font-size: clamp();
+    font-family:Arial, Helvetica, sans-serif ;
 }
 
 .dashboard-layout {
@@ -93,9 +90,11 @@ p {
 /* announcements and trending aside */
 
 .info-bar {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+
 }
 
 .info-bar > section {
@@ -104,15 +103,31 @@ p {
 }
 
 .announcements {
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 3;
-    
+    width: 12rem;
 }
 
-.announcement-box {
-    width: 30px;
+.trending {
+    display: flex; 
+    flex-direction: column;
+    width: 12rem;
 }
+
+.avatar {
+    width: 3rem;
+    height: 3rem;
+}
+
+.trending-user {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.user-met {
+    gap: 0;
+}
+
+
 
 /* mobile breakpoint */
 
