@@ -3,6 +3,20 @@
     font-family:Arial, Helvetica, sans-serif ;
 }
 
+h4 {
+    margin: 0;
+}
+
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .dashboard-layout {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -76,7 +90,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(175px, 1fr));
     grid-auto-rows: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 1rem;
 }
 
@@ -90,11 +104,8 @@
 /* announcements and trending aside */
 
 .info-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: space-between;
-
+    display: grid;
+    
 }
 
 .info-bar > section {
@@ -103,13 +114,18 @@
 }
 
 .announcements {
+    display: flex;
+    flex-direction: column;
     width: 12rem;
+    align-self: flex-start
+
 }
 
 .trending {
     display: flex; 
     flex-direction: column;
     width: 12rem;
+    align-self: flex-start;
 }
 
 .avatar {
@@ -122,11 +138,6 @@
     align-items: center;
     gap: 2px;
 }
-
-.user-met {
-    gap: 0;
-}
-
 
 
 /* mobile breakpoint */
