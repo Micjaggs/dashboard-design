@@ -12,6 +12,10 @@ p {
     margin-bottom: 0.3rem;
 }
 
+.info-bar h3 {
+    height: 0;
+}
+
 h3 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -101,6 +105,14 @@ h3 {
   height: 85%;
 }
 
+.project-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+
 /* announcements and trending aside */
 
 .info-bar {
@@ -137,6 +149,7 @@ h3 {
     display: flex;
     align-items: center;
     gap: 2px;
+    align-self: flex-start;
 }
 
 
