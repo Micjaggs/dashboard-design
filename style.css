@@ -110,6 +110,21 @@ h3 {
     justify-content: flex-end;
     gap: 2rem;
     padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.project-icons > button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    color: gray;
+}
+
+.project-icons > button:hover {
+    transform: scale(1.2);
+    transition: 0.1s;
 }
 
 
