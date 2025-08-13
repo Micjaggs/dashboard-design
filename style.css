@@ -3,6 +3,10 @@
     font-family:Arial, Helvetica, sans-serif ;
 }
 
+body {
+    margin: 0;
+}
+
 h4 {
     margin: 0;
 }
@@ -21,6 +25,15 @@ h3 {
     margin-bottom: 0.5rem;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    color: white;
+}
+
 .dashboard-layout {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -33,7 +46,8 @@ h3 {
     display: flex;
     flex-direction: column;
     grid-column: 1 / 2;
-    grid-row: 1 / 2
+    grid-row: 1 / 2;
+    background-color: #20A4F3;
 }
 
 .sidebar > nav {
@@ -56,22 +70,79 @@ h3 {
     height: 100%;
 }
 
+/* Top search Bar */
+
 .top-bar {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.profile-pic {
+    height: 3rem;
+    width: 3rem;
+}
+
+input[type="search"] {
+    border-radius: 15px;
+    height: 1.7rem;
+    width: 65%;
+    background-color: #f0f0f0;
+    border: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-bar button {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
 }
 
 .user-info {
     grid-column: 1;
-    grid-row: 2
+    grid-row: 2;
+    display: flex;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    padding-left: 1rem;
+}
+
+strong {
+    font-size: 1.2rem;
 }
 
 .btns-right {
     grid-column: 2;
     grid-row: 2;
     display: flex;
-    gap: 3rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btns-right > button {
+    background-color: #20A4F3;
+    border-radius: 15px;
+    border-style: none;
+    padding: 0.4rem;
+    color: white;
+    width: 5rem;
+    height: 2.0rem;
+    font-weight: bold;
+    
 }
 
 /* main-content wraps the PROJECT grid and the project tiles */
@@ -81,6 +152,7 @@ h3 {
     height: 100%;
     grid-template-columns: minmax(0, 3fr) minmax(260px, 1fr);
     grid-template-rows: 3rem 1fr;
+    background-color: #f0f0f0
 }
 
 .projects {
@@ -144,7 +216,8 @@ h3 {
     display: flex;
     flex-direction: column;
     width: 12rem;
-    align-self: flex-start
+    align-self: flex-start;
+    background-color: white;
 
 }
 
@@ -153,6 +226,7 @@ h3 {
     flex-direction: column;
     width: 12rem;
     align-self: flex-start;
+    background-color: white;
 }
 
 .avatar {
