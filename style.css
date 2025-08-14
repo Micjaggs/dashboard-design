@@ -88,6 +88,38 @@ a {
     width: 3rem;
 }
 
+.right-side {
+    display: flex;
+    align-items: center;
+}
+
+.name-icon {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: bold;
+    
+}
+
+.name-icon .profile-pic {
+    height: 2rem;
+    width: 2rem;
+}
+
+.icon-bell {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    color: black
+}
+
+.icon-bell:hover {
+    transform: scale(1.2);
+    transition: 0.1s;
+}
+
 input[type="search"] {
     border-radius: 15px;
     height: 1.7rem;
@@ -204,7 +236,9 @@ strong {
 
 .info-bar {
     display: grid;
-    
+    align-content: start;       
+    grid-auto-rows: max-content;
+    row-gap: 2rem;            
 }
 
 .info-bar > section {
