@@ -28,10 +28,11 @@ The goal of the project was to practice advanced **CSS Grid** and **Flexbox** te
 
 ## 📸 Preview
 
+![dashboard preview](image.png)
 
 ---
 
 ## 🔧 How to Use
 
-
+https://micjaggs.github.io/dashboard-design/
 
